@@ -49,3 +49,8 @@ const tommy = new Person('Tommy');
 tommy.introduce();
 // This time, the prototype of tommy is not Person as you might expect, but Person's prototype
 console.log(`Person's prototype is the prototype of ${tommy.name}: ${Person.prototype.isPrototypeOf(tommy)}`);
+// And tommy is an instanceof Person
+console.log(`${tommy.name} is an instanceof Person: ${tommy instanceof Person}`);
+
+// Whereas for our objects created with Object.create, we need to check if they're instances of the prototypes constructor!
+console.log(`${nick.name} is an instanceof person.constructor: ${nick instanceof person.constructor}`);
