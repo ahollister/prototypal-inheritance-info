@@ -1,9 +1,9 @@
 // Let's declare a person object using an object literal
 const person = {
-	init: function (name) {
+	init: function(name) {
 		this.name = name;
 	},
-	introduce: function () {
+	introduce: function() {
 		console.log(`My name is ${this.name}`);
 	}
 }
@@ -19,7 +19,7 @@ nick.init('Nick');
 // We can set a property on an object that has the property already set in its prototype
 // ... and when called, it will refer to the property highest on the 'prototype chain'.
 // If the property doesn't exist on the object we called, it'll look for it in the prototype instead
-nick.introduce = function () {
+nick.introduce = function() {
 	console.log(`My name is ${this.name}, and I'm totally obsessed with Emacs`);
 }
 nick.introduce(); // ​​​​​My name is Nick, and I'm totally obsessed with Emacs​​​​​
@@ -39,7 +39,7 @@ console.log(`Array.prototype is the prototype of myTestArr: ${Array.prototype.is
 // Here's another way using a constructor
 const Person = function(name) {
 	this.name = name;
-	this.introduce = function () {
+	this.introduce = function() {
 		console.log(`My name is ${this.name}`);
 	}
 }
